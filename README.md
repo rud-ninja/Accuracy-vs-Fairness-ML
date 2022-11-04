@@ -23,16 +23,22 @@ SVM with radom values of hyperparameters C and gamma. Default kernel 'rbf' used.
 ## Figures and tables
 
 ![](https://github.com/rud-ninja/ML_hyperparameter_tuning/blob/main/var_cval.jpg)
+
+
 Fig 1: Accuracy and fairness vs C value
 
 
 
 
 ![](https://github.com/rud-ninja/ML_hyperparameter_tuning/blob/main/var_gval.jpg)
+
+
 Fig 2: Accuracy and fairness vs gamma value
 
 
 
 
 ![](https://github.com/rud-ninja/ML_hyperparameter_tuning/blob/main/summary.jpg)
+
+
 Fig 3: Final summary of results
