@@ -42,3 +42,7 @@ Fig 2: Accuracy and fairness vs gamma value
 
 
 Fig 3: Final summary of results
+
+
+
+For a more detailed report, please click [here](https://github.com/rud-ninja/ML_hyperparameter_tuning/blob/main/ml_hyperparameter_tuning_report.pdf).
