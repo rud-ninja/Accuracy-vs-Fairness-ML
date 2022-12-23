@@ -1,48 +1,63 @@
-# Title: Research Classification model improvement by optimizing accuracy and reducing bias by hyperparameter tuning and k-fold cross validation.
+# Title: Accuracy and fairness tradeoff in imbalanced binary classification
+This is a simple research on the changes in accuracy and fairness metrics for varying model hyperparameters. The work aims to find different combinations of hyperparameters that (i) prioritise prediction accuracy and (ii) prioritises bias mitigation in predictions for a binary classification task with imbalanced class representation.
+
+The dataset used for the task is the German credit data. More information about the dataset can be found [here](https://github.com/rud-ninja/ML_hyperparameter_tuning/blob/main/new/german.doc)
 
 ## Objectives:
-1. Preprocess dataset.
-2. Explore different hyperparameters of a selected classification model algorithm and test models with different values for the same.
-3. Derive hyperparameter values and score for the most accurate and fair models respectively.
-4. Perform reweighing of dataset to reduce bias in representation of the critical feature categories.
-5. Repeat points 2 & 3 on reweighed dataset.
-6. Discuss a strategy to choose the most generalized model
+1. Visualising the imbalance.
+2. Select the prediction algorithm to be used.
+3. Perform hyperparameter tuning with 5 fold cross validation and appropriate scoring metrics to derive most accurate and fair models respectively.
+4. Perform reweighing of dataset to add weights and reduce bias according to the class representation of the critical features.
+5. Check performance of models derived in point 3. on the reweighed dataset.
 
 
 #### Libraries used:
 Pandas, NumPy, aif360 (for datasets), sklearn, matplotlib
 
 #### Datasets used:
-*Adult income* and *German* from the aif360 library.
+*German* from the aif360 library.
+Older version included *Adult income* as well. Python notebook [here](https://github.com/rud-ninja/ML_hyperparameter_tuning/blob/main/ML_hyperparameter_tuning/ml_hyperparameter_tuning_code.ipynb)
 
-#### Classification model:
-SVM with radom values of hyperparameters C and gamma. Default kernel 'rbf' used. Equal opportunity difference and disparate impact were chosen as the metrics for bias.
+#### Classification models:
+Logistic regression and Support vector classifier
+
+#### Performance metrics considered:
+For accuracy: 'Accuracy' or Correct predictions / Total predictions
+For fairness: 'F-score' or (2 * Precision * Recall) / (precision + recall)
 
 
 
 ## Figures and tables
 
-![](https://github.com/rud-ninja/ML_hyperparameter_tuning/blob/main/var_cval.jpg)
+![](https://github.com/rud-ninja/ML_hyperparameter_tuning/blob/main/new/hist.png)
 
 
-Fig 1: Accuracy and fairness vs C value
+Fig 1: Histogram of features displaying the imbalance in representation of the protected classes 'Age' and 'Sex' and labels. Histogram of features in blue and that of labels in Orange.
 
-
-
-
-![](https://github.com/rud-ninja/ML_hyperparameter_tuning/blob/main/var_gval.jpg)
-
-
-Fig 2: Accuracy and fairness vs gamma value
+The protected attribute chosen in this case to test bias is 'Age'.
 
 
 
 
-![](https://github.com/rud-ninja/ML_hyperparameter_tuning/blob/main/summary.jpg)
+![](https://github.com/rud-ninja/ML_hyperparameter_tuning/blob/main/new/plot.png)
 
 
-Fig 3: Final summary of results
+Fig 2: Choice of prediction algorithm based on accuracy and the ratio of F-scores between the unprivileged and privileged class. Values closer to 1 are fairer in predictions than those much lesser and represent bias towards the positive class.
 
 
 
-For a more detailed report, please click [here](https://github.com/rud-ninja/ML_hyperparameter_tuning/blob/main/ml_hyperparameter_tuning_report.pdf).
+
+![](https://github.com/rud-ninja/ML_hyperparameter_tuning/blob/main/new/svc.jpg)
+
+
+Fig 3: Results of Support vector classifier
+
+
+![](https://github.com/rud-ninja/ML_hyperparameter_tuning/blob/main/new/logreg.jpg)
+
+
+Fig 4: Results of Logistic regression
+
+
+
+For more detailed discussion on accuracy and fairness, please click [here](https://github.com/rud-ninja/ML_hyperparameter_tuning/blob/main/ml_hyperparameter_tuning_report.pdf).
