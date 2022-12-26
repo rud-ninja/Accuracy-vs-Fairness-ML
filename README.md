@@ -3,12 +3,12 @@ This is a simple research on the changes in accuracy and fairness metrics for va
 
 The dataset used for the task is the German credit data. More information about the dataset can be found [here](https://github.com/rud-ninja/ML_hyperparameter_tuning/blob/main/new/german.doc)
 
-## Objectives:
-1. Visualising the imbalance.
-2. Select the prediction algorithm to be used.
-3. Perform hyperparameter tuning with 5 fold cross validation and appropriate scoring metrics to derive most accurate and fair models respectively.
-4. Perform reweighing of dataset to add weights and reduce bias according to the class representation of the critical features.
-5. Check performance of models derived in point 3. on the reweighed dataset.
+## Objectives fulfilled:
+1. Visualised the imbalance.
+2. Selected 2 best performing prediction algorithms.
+3. Performed hyperparameter tuning with 5 fold cross validation and appropriate scoring metrics to derive most accurate and fair models of the chosen algorithms.
+4. Performed reweighing of dataset to modify instance weights and reduce bias according to the class representation of the protected features i.e age and sex.
+5. Verified performance of models derived in point 3. on the reweighed dataset.
 
 
 #### Libraries used:
