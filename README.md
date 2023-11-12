@@ -83,12 +83,12 @@ ul
 </head>
 
 <body lang=EN-US style='word-wrap:break-word'>
+	
+<h1 style="font-size: 24px;">Visualizing Accuracy vs. Fairness in ML Models</h1>
 
-<div class=WordSection1>
+<div class=WordSection1
 
-<p class=MsoNormal align=center style='text-align:center;line-height:150%'><b><span
-lang=EN-IN style='font-size:22.0pt;line-height:150%'>Visualising Accuracy vs.
-Fairness in ML models</span></b></p>
+
 
 <p class=MsoNormal style='text-align:justify;line-height:150%'><span
 lang=EN-IN>&nbsp;</span></p>
