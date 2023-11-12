@@ -763,6 +763,7 @@ of reweighing and confirmed the minimization of bias in the training process.</s
 
 <p class=MsoNormal style='text-align:justify;line-height:150%'><span
 lang=EN-IN>The complete code in python can be found here.</span></p>
+<a href="https://github.com/rud-ninja/Prediction_accuracy_vs_Fairness_in_ML/blob/main/accuracy_vs_fairness.ipynb">Jupyter Notebook</a>
 
 </div>
 
